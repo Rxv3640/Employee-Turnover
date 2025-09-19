@@ -12,11 +12,11 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, confusion_matrix, roc_curve, auc
 from sklearn.pipeline import Pipeline
 
-df = pd.read_csv('HR_comma_sep.csv')
+df = pd.read_csv('HR_comma_sep.csv') '''Read dataset'''
 
-df = df.dropna()
+df = df.dropna() '''Remove na values from dataset'''
 
-correlation_matrix = df.select_dtypes(include='number').corr()
+correlation_matrix = df.select_dtypes(include='number').corr() '''Find the correlation between features in the dataset'''
 
 '''sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f")
 plt.show()
@@ -117,4 +117,5 @@ plt.show()
 conf_matrix = confusion_matrix(y_test, y_pred_test_log_reg)
 print('Confusion matrix')
 print(conf_matrix)
+
 
